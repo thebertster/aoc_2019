@@ -47,4 +47,3 @@ for noun in range(100):
     break
 
 aoc.print_solution(2, 100 * noun + verb)
-

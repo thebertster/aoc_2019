@@ -53,4 +53,4 @@ for part in wire_path_2:
         step += 1
 
 aoc.print_solution(1, shortest_crossing)
-aoc.print_solution(1, shortest_steps)
+aoc.print_solution(2, shortest_steps)

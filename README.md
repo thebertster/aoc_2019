@@ -1,5 +1,5 @@
 
-Solutions to Advent of Code 2019 (http://adventofcode.com/2019/)
+# Solutions to Advent of Code 2019 (<http://adventofcode.com/2019/>)
 
 Using Python. Aiming for pylint score of 10.0 for each day against the Google Python style guide.
 

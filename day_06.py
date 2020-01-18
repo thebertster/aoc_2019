@@ -47,5 +47,5 @@ while body not in you_path:
     body = orbits[body]
 
 aoc.print_solution(2, orbit_count['YOU'] +
-                      orbit_count['SAN'] -
-                      2*orbit_count[body] - 2)
+                   orbit_count['SAN'] -
+                   2*orbit_count[body] - 2)

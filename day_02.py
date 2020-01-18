@@ -1,5 +1,6 @@
 from lib.aoclib import AOCLib
 
+
 def run_program(program):
     pc = 0
 
@@ -17,6 +18,7 @@ def run_program(program):
             break
 
     return program[0]
+
 
 puzzle = (2019, 2)
 

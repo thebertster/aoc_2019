@@ -10,18 +10,20 @@ aoc = AOCLib(puzzle[0])
 
 puzzle_input = aoc.get_puzzle_input(puzzle[1], AOCLib.lines_to_list)
 
-asteroids = {}
+asteroids = []
 
 for y, row in enumerate(puzzle_input):
     for x, obj in enumerate(row):
         if obj == '#':
-            asteroids[(x, y)] = {}
+            asteroids.append((x, y))
 
 most_visible = (-1, None)
 
 rounding_factor = -100000
+best_asteroid = None
 
-for asteroid, rays in asteroids.items():
+for asteroid in asteroids:
+    rays = {}
     for other_asteroid in asteroids:
         if asteroid != other_asteroid:
             x, y = ((other_asteroid[0] - asteroid[0]),
@@ -31,11 +33,11 @@ for asteroid, rays in asteroids.items():
             rays.setdefault(direction, []).append(magnitude)
     visible_asteroids = len(rays)
     if visible_asteroids > most_visible[0]:
-        most_visible = (visible_asteroids, asteroid)
+        most_visible = (visible_asteroids, rays, asteroid)
 
 aoc.print_solution(1, most_visible[0])
 
-visible_asteroids = asteroids[most_visible[1]]
+visible_asteroids = most_visible[1]
 directions = sorted(visible_asteroids.keys())
 
 asteroids_to_vaporise = 200
@@ -53,7 +55,7 @@ while True:
     break
 
 angle = direction/rounding_factor
-x = most_visible[1][0] + round(closest_asteroid_distance * sin(angle))
-y = most_visible[1][1] + round(closest_asteroid_distance * cos(angle))
+x = most_visible[2][0] + round(closest_asteroid_distance * sin(angle))
+y = most_visible[2][1] + round(closest_asteroid_distance * cos(angle))
 
 aoc.print_solution(2, 100*x + y)

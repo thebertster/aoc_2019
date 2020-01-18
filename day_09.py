@@ -1,7 +1,6 @@
 from lib.aoclib import AOCLib
 from intcode_computer import IntcodeComputer
 
-
 puzzle = (2019, 9)
 
 # Initialise the helper library

@@ -11,6 +11,7 @@ class IntcodeMemory:
     def __setitem__(self, index, value):
         self._data[index] = value
 
+
 class IntcodeComputer:
     def __init__(self, starting_program, *args):
         self._program = IntcodeMemory(starting_program)

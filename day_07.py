@@ -2,7 +2,6 @@ from lib.aoclib import AOCLib
 from permutations import permutations
 from intcode_computer import IntcodeComputer
 
-
 puzzle = (2019, 7)
 
 # Initialise the helper library

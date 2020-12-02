@@ -1,5 +1,5 @@
 {
-	"python.pythonPath": "c:\\Users\\Bert\\Source\\Repos\\Python\\aoc_2019\\env\\Scripts\\python.exe",
+	"python.pythonPath": "env\\Scripts\\python.exe",
 	"python.linting.pylintEnabled": true,
 	"python.linting.enabled": true
 }

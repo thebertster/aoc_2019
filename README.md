@@ -11,3 +11,5 @@ make an exception for painful things like trigonometry and date/time manipulatio
 This also means no dirty use of evals and execs!
 
 Aiming for a run time of < 15 seconds.
+
+Note: This year got incredibly boring - too much analysis, not enough coding :(
